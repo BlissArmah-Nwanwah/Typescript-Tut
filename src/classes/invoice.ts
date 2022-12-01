@@ -7,6 +7,6 @@ export class Invoice{
         public amount: number){ 
     }
     format(){
-        return `${this.client} owes £${this.amount} for ${details}`
+        return `${this.client} owes £${this.amount} for ${this.details}`
     }
 }
