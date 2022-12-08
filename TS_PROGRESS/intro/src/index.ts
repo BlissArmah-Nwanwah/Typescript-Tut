@@ -81,20 +81,65 @@
 
 // Classes
 
-class Account{
-    id:number
-    owner: string
-    balance: number
-    constructor(id:number, owner: string, balance: number){
-        this.id=id
-        this.owner=owner
-        this.balance=balance
-    }
+// class Account{
+//        nickname ?: string
 
-    deposit(amount:number):void{
-        if (amount<=0) {
-            throw new Error('amount is invalid');
-        }
-        this.balance += amount
+//     constructor(
+//         public readonly id:number,
+//          public owner: string,
+//          private  _balance: number){
+//     }
+
+//     deposit(amount:number):void{
+//         if (amount<=0) 
+//             throw new Error('amount is invalid');
+//             // record a transaction
+//         this._balance += amount
+//     }
+//     get balance():number{
+//         return this._balance
+//     }
+
+    
+// }
+
+// let account = new Account(1,"Bliss",0)
+// console.log(account.balance)
+
+
+// INHERITANCE
+
+// class Person {
+//     constructor(public firstName: string, public lastname: string){
+//            }
+//            get fullname(){
+//             return  this.firstName + ' ' + this.lastname
+//           }
+//         walk(){
+//             console.log('walking')
+//         }
+// }
+
+// class Student extends Person{
+//     constructor(public studentId:number, firstName: string, lastname: string){
+//         super (firstName,lastname)
+//     }
+
+//     taketest(){
+//         console.log('taking a test')
+//     }
+// }
+
+// let student = new Student(1,'Bliss','bliss@test.com')
+
+// Generics
+
+class Keyvalue<T>{
+    constructor (public key:T, public value: string){
+
     }
 }
+
+let pair = new Keyvalue<number>(1,'j')
+pair.key
+
